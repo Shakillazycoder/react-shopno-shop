@@ -15,7 +15,9 @@ const handleAddToCart = (product) => {
    }
 }
 
-
+ const handleRemoveItem = (id) => {
+   setCarts(carts.filter(p => p.id !== id));
+ }
 
   return (
     <>
@@ -23,7 +25,7 @@ const handleAddToCart = (product) => {
         <Header></Header>
         <div className="flex max-w-7xl justify-around">
           <Products handleAddToCart={handleAddToCart}></Products>
-          <Shopingcard carts={carts}></Shopingcard>
+          <Shopingcard handleRemoveItem={handleRemoveItem} carts={carts}></Shopingcard>
         </div>
       </div>
     </>

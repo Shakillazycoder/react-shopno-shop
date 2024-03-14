@@ -14,7 +14,7 @@ const Product = ({ product, handleAddToCart }) => {
           <p>{description.slice(0, 100)}...</p>
           <p>${price}</p>
           <div className="card-actions">
-            <button onClick={() => handleAddToCart(product)} className="btn btn-primary">Buy Now</button>
+            <button onClick={() => handleAddToCart(product)} className="btn btn-primary">Add to Cart</button>
           </div>
         </div>
       </div>
